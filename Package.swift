@@ -443,7 +443,8 @@ extension Product {
 let package = Package(
   name: grpcPackageName,
   products: [
-    .grpc,
+    .library(name: "GRPC", type: .static, targets: ["GRPC"]),
+//    .grpc,
     .cgrpcZlib,
     .protocGenGRPCSwift,
     .grpcSwiftPlugin,
